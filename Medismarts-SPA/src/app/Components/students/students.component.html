@@ -1,0 +1,59 @@
+<div class="card">
+    <div class="card-header text-center">
+        {{pageTitle}}
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-6">
+               
+            </div>
+            <div class="col-6">
+              <!-- <button class="btn btn-sm btn-outline-warning" style="float: right;" (click)="editStudent()"><i class="fa fa-download"></i> &nbsp; Export to Excel</button> -->
+              <!-- <button class="btn btn-sm btn-outline-info" style="float: right;" printTitle="Client Instruction" [useExistingCss]="true" printSectionId="print-me" ngxPrint><i class="fa fa-download"></i> &nbsp; Export to PDF</button> -->
+                <button class="btn btn-sm btn-outline-primary" style="float: right;" (click)="createStudent()"><i class="fa fa-plus"></i> &nbsp; Create</button>
+            </div>
+        </div>
+        <br>
+
+          <div class='table-responsive'>
+            <table class='table' *ngIf='studentModel.length'>
+              <thead>
+                <tr>
+                  
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Date of Birth</th>
+                  <th>Course of Study</th>
+                  <th>Degree</th>
+                  <th>Faculty</th>
+                  <th>Department</th>
+                  <th>Bio</th>
+                  <th>City</th>
+                  <th>Country</th>
+                  <th>Degree</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor='let student of studentModel'>
+                  <td>{{ student.name }}</td>
+                  <td>{{ student.gender }}</td>
+                  <td>{{ student.dateOfBirth | date: 'MMMM d, y'}}</td>
+                  <td>{{ student.courseOfStudy }}</td>
+                  <td> {{ student.degree }}</td>
+                  <td>{{ student.faculty }}</td>
+                  <td>{{ student.department }}</td>
+                  <td>{{ student.bio }}</td>
+                  <td>{{ student.city }}</td>
+                  <td> {{ student.country }}</td>
+                  <td> <button class="btn btn-sm btn-outline-success" (click)="editStudent(student)"><i class="fa fa-edit"></i></button>&nbsp;
+                    <button class="btn btn-sm btn-outline-info" (click)="viewStudent(student)"><i class="fa fa-info-circle"></i></button>&nbsp;
+                    <button class="btn btn-sm btn-outline-danger" (click)="deleteStudent(student)"><i class="fa fa-trash"></i></button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      
+
+    </div>
+</div>

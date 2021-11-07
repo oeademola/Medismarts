@@ -1,0 +1,113 @@
+<div class="card">
+    <div class="card-header text-center">
+        {{ pageTitle }}
+    </div>
+    <form [formGroup]="formGroup">
+    <div class="card-body"> 
+      <div class="form-group row">
+        <div class="col-2">
+          <label class="form-label" for="form1Example1">Name</label>
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="name" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2">
+          <label class="form-label" for="form1Example2">Gender</label>
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="gender" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2">
+          <label class="form-label" for="form1Example2">Date of Birth</label>
+        </div>
+        <div class="col-5">
+          <input type="date" formControlName="dateOfBirth" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2">
+          <label class="form-label" for="form1Example2">Course Of Study</label>
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="courseOfStudy" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2">
+          <label class="form-label" for="form1Example2">Degree</label>
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="degree" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2">
+          <label class="form-label" for="form1Example2">Faculty</label>
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="faculty" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2">
+          <label class="form-label" for="form1Example2">Department</label>
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="department" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2">
+          <label class="form-label" for="form1Example2">Bio</label>
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="bio" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2">
+          <label class="form-label" for="form1Example2">City</label>
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="city" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2">
+          <label class="form-label" for="form1Example2">Country</label>
+        </div>
+        <div class="col-5">
+          <input type="text" formControlName="country" class="form-control" />
+        </div>
+      </div>
+
+    </div>
+    </form>
+
+    <div class="card-footer">
+      <div class="row">
+        <div class="col-4">
+          <button type="submit" class="btn btn-outline-primary btn-block offset-lg-8"
+            (click)="createComand()">Create</button>
+        </div>
+        <div class="col-6">
+          <a class="btn btn-outline-danger btn-block float-right" (click)="closeDialog()">
+            Close
+            </a>
+        </div>
+      </div>
+    </div>
+</div>
